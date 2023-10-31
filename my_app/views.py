@@ -10,17 +10,22 @@ def index_view(request):
     return render(request,'index.html',context)
 
 def contact_view(request):
+    
+    text = Contact.objects.all()
 
     context = {
+
+        'text':text
         
     }
     return render(request,'contact.html',context)
 
 
 def about_view(request):
+    title = About.objects.all()
 
     context = {      
-
+        'title':title
     }
     return render(request,'about.html',context)
 
