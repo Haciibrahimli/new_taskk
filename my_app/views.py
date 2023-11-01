@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from my_app.models import *
+from my_app.forms import *
 
 def index_view(request):
 
@@ -10,12 +11,13 @@ def index_view(request):
     return render(request,'index.html',context)
 
 def contact_view(request):
+    form = ContactForm()
     
     text = Contact.objects.all()
 
     context = {
-
-        'text':text
+        'form':form,
+        'text':text,
         
     }
     return render(request,'contact.html',context)
@@ -51,3 +53,11 @@ def service_view(request):
     }
 
     return render(request,'service.html',context)
+
+# def maindetails_view(request):
+
+#     context = {
+
+#     }
+   
+

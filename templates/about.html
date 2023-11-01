@@ -40,24 +40,24 @@
     <header class="header_section">
       <div class="header_top">
         <div class="container-fluid header_top_container">
-          <a class="navbar-brand " href="index.html"> Tro<span>Weld</span> </a>
+          <a class="navbar-brand " href="index.html"> <img src="{{detail.logo.url}}" alt=""> </a>
           <div class="contact_nav">
             <a href="">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
               <span>
-                Location
+                {{detail.location}}
               </span>
             </a>
             <a href="">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-                Call : +01 123455678990
+             {{detail.phone}}
               </span>
             </a>
             <a href="">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
-                demo@gmail.com
+               {{detail.email}}
               </span>
             </a>
           </div>

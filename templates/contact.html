@@ -136,12 +136,12 @@
             <form action="">
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="text" class="form-control" placeholder="Your Name" />
+                  {{form.name}}
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-lg-6">
-                  <input type="text" class="form-control" placeholder="Phone Number" />
+                  {{form.tel}}
                 </div>
                 <div class="form-group col-lg-6">
                   <select name="" id="" class="form-control wide">
@@ -154,12 +154,12 @@
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="email" class="form-control" placeholder="Email" />
+                  {{form.mail}}
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="text" class="message-box form-control" placeholder="Message" />
+                 {{form.mesage}}
                 </div>
               </div>
               <div class="btn_box">
@@ -173,7 +173,7 @@
         <div class="col-md-6 px-0">
           <div class="map_container">
             <div class="map">
-              <div id="googleMap"></div>
+              <div ><iframe src="{{detail.map_url}}" width="600" height="465" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
             </div>
           </div>
         </div>
