@@ -4,7 +4,7 @@ from my_app.models import Contact
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ('name', 'mail', 'tel', 'mesage')
+        fields = ('name', 'mail', 'tel', 'mesage','service')
 
     def __init__(self, *args, **kwargs):
         super(ContactForm , self).__init__(*args, **kwargs)
@@ -16,5 +16,5 @@ class ContactForm(forms.ModelForm):
             self.fields['name'].widget.attrs.update({'placeholder':'adiniz'})
             self.fields['mail'].widget.attrs.update({'placeholder':'E-mailiniz'})
             self.fields['tel'].widget.attrs.update({'placeholder':'telefon nomreniz'})
-            self.fields['mesage'].widget.attrs.update({'placeholder':'mesajlariniz'})
+            self.fields['mesage'].widget.attrs.update({'placeholder':'mesajlariniz','class':'message-box form-control'})
         

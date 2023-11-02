@@ -110,9 +110,12 @@
                     </span>
                   </a>
                 </li>
-                <form class="form-inline">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="form-inline" method="get">
+                  {% csrf_token%}
+                  <div class="input-group">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <button type="submit" class="btn btn-outline-primary">search</button>
+                  </div>
                   </button>
                 </form>
               </ul>

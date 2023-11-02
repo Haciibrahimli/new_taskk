@@ -38,9 +38,10 @@ class About(models.Model):
 class Contact(models.Model):
     name = models.CharField(max_length=255,verbose_name='ad')
     mail = models.CharField(max_length=255,verbose_name='mail')
-    tel = models.IntegerField(max_length=255,verbose_name='telefon nomresi')
-    service = models.CharField(max_length=255,verbose_name='xidmet')
+    tel = models.CharField(max_length=255,verbose_name='telefon nomresi')
+    service = models.CharField(max_length=255,verbose_name='xidmet',null=True,blank=True)
     mesage = models.CharField(max_length=255,verbose_name='mesage')
+    contact_service = models.CharField(max_length=255,null=True,blank=True)
 
 
     def __str__(self):
